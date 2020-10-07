@@ -1,0 +1,36 @@
+﻿@using MyCV.Models.EntityFramework
+@model MyCV.Models.Class.MyCVClass
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    Merhabalar, Ben
+    @foreach (var m in Model.dbMe)
+    {
+        @m.NAME
+    }
+    
+    @foreach (var m in Model.dbMe)
+    {
+        @m.SURNAME
+    }
+
+</h2>
+<p>
+    @foreach (var m in Model.dbMe)
+    {
+        @m.myDESC
+    }
+</p>
+<h4>C# .NET</h4>
+@foreach (var m in Model.dbSkill)
+{
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: @m.SKILL;">
+            @m.SKILLNAME
+            &nbsp;
+            @m.SKILL
+        </div>
+    </div>
+}

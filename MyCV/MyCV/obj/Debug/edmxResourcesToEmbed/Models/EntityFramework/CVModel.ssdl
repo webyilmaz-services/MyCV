@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CVDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CVDB.dbo.tblMe' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblMe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SURNAME" Type="varchar" MaxLength="50" />
+    <Property Name="myDESC" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CVDB.dbo.tblSite' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblSite">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SITENAME" Type="varchar" MaxLength="50" />
+    <Property Name="SITEDESC" Type="varchar" MaxLength="50" />
+    <Property Name="FOOTER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'CVDB.dbo.tblSkill' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblSkill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SKILLNAME" Type="varchar" MaxLength="50" />
+    <Property Name="SKILL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CVDBModelStoreContainer">
+    <EntitySet Name="tblMe" EntityType="Self.tblMe" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblMe].[ID] AS [ID], 
+    [tblMe].[NAME] AS [NAME], 
+    [tblMe].[SURNAME] AS [SURNAME], 
+    [tblMe].[myDESC] AS [myDESC]
+    FROM [dbo].[tblMe] AS [tblMe]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblSite" EntityType="Self.tblSite" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblSite].[id] AS [id], 
+    [tblSite].[SITENAME] AS [SITENAME], 
+    [tblSite].[SITEDESC] AS [SITEDESC], 
+    [tblSite].[FOOTER] AS [FOOTER]
+    FROM [dbo].[tblSite] AS [tblSite]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblSkill" EntityType="Self.tblSkill" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblSkill].[id] AS [id], 
+    [tblSkill].[SKILLNAME] AS [SKILLNAME], 
+    [tblSkill].[SKILL] AS [SKILL]
+    FROM [dbo].[tblSkill] AS [tblSkill]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

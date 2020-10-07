@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CVDBModelStoreContainer" CdmEntityContainer="CVDBEntities1">
+    <EntitySetMapping Name="tblMes">
+      <EntityTypeMapping TypeName="CVDBModel.tblMe">
+        <MappingFragment StoreEntitySet="tblMe">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="myDESC" ColumnName="myDESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSites">
+      <EntityTypeMapping TypeName="CVDBModel.tblSite">
+        <MappingFragment StoreEntitySet="tblSite">
+          <ScalarProperty Name="FOOTER" ColumnName="FOOTER" />
+          <ScalarProperty Name="SITEDESC" ColumnName="SITEDESC" />
+          <ScalarProperty Name="SITENAME" ColumnName="SITENAME" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSkills">
+      <EntityTypeMapping TypeName="CVDBModel.tblSkill">
+        <MappingFragment StoreEntitySet="tblSkill">
+          <ScalarProperty Name="SKILL" ColumnName="SKILL" />
+          <ScalarProperty Name="SKILLNAME" ColumnName="SKILLNAME" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
